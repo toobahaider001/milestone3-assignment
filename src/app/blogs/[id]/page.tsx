@@ -1,13 +1,9 @@
 'use client'
-import React, { ReactNode, useState } from 'react'
+import React, { useState } from 'react'
 import { blogsData } from '../../../../data/blogs'
 
-interface Iparams {
-  params: {
-    id: string
-  }
-}
-const page = ({ params }: { params: Promise<{ id: string }> }) => {
+
+const Page = ({ params }: { params: Promise<{ id: string }> }) => {
   const [comment,setComment] = useState("");
   const [comments,setComments] = useState<string[]>([]);
  
@@ -50,4 +46,4 @@ const page = ({ params }: { params: Promise<{ id: string }> }) => {
   )
 }
 
-export default page
+export default Page
